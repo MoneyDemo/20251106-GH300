@@ -36,4 +36,7 @@ if __name__ == '__main__':
     # Run in development mode with debug enabled
     # WARNING: debug=True and host='0.0.0.0' should ONLY be used for development
     # For production, use a proper WSGI server (e.g., Gunicorn, uWSGI)
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # Set FLASK_DEBUG=0 environment variable to disable debug mode
+    import os
+    debug_mode = os.environ.get('FLASK_DEBUG', '1') == '1'
+    app.run(debug=debug_mode, host='0.0.0.0', port=5000)

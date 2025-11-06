@@ -74,6 +74,13 @@ python3 app.py
 
 啟動後，在瀏覽器中開啟 [http://localhost:5000](http://localhost:5000) 即可查看網站。
 
+預設會啟用除錯模式（debug mode）。若要停用除錯模式，可設定環境變數：
+
+```bash
+export FLASK_DEBUG=0
+python3 app.py
+```
+
 ### 使用 Flask CLI 啟動
 
 ```bash
