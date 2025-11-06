@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}首頁 - Flask 範例網站{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h2>歡迎來到 Flask 範例網站</h2>
+    <p class="subtitle">一個使用 Python Flask 框架建立的簡單網站範例</p>
+</div>
+
+<div class="content-section">
+    <h3>關於此專案</h3>
+    <p>這是一個最小可運作的 Python 網站範例，展示如何使用 Flask 框架建立基本的網頁應用程式。</p>
+    
+    <div class="features">
+        <div class="feature-card">
+            <h4>🚀 簡單易用</h4>
+            <p>使用 Flask 輕量級框架，快速上手建立網站</p>
+        </div>
+        <div class="feature-card">
+            <h4>📝 清晰結構</h4>
+            <p>專案結構清楚，方便理解與後續擴展</p>
+        </div>
+        <div class="feature-card">
+            <h4>🎨 基礎前端</h4>
+            <p>包含 HTML 與 CSS，提供簡潔的使用者介面</p>
+        </div>
+    </div>
+    
+    <div class="cta">
+        <a href="{{ url_for('info') }}" class="btn">查看專案資訊</a>
+    </div>
+</div>
+{% endblock %}

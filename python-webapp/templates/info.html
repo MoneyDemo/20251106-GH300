@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}專案資訊 - Flask 範例網站{% endblock %}
+
+{% block content %}
+<div class="info-page">
+    <h2>專案資訊</h2>
+    
+    <div class="info-section">
+        <h3>專案名稱</h3>
+        <p class="info-value">{{ repo_info.name }}</p>
+    </div>
+    
+    <div class="info-section">
+        <h3>專案說明</h3>
+        <p class="info-value">{{ repo_info.description }}</p>
+    </div>
+    
+    <div class="info-section">
+        <h3>技術架構</h3>
+        <div class="tech-stack">
+            <div class="tech-item">
+                <strong>框架：</strong>{{ repo_info.framework }}
+            </div>
+            <div class="tech-item">
+                <strong>語言：</strong>{{ repo_info.language }}
+            </div>
+        </div>
+    </div>
+    
+    <div class="info-section">
+        <h3>專案特色</h3>
+        <ul class="features-list">
+            {% for feature in repo_info.features %}
+            <li>{{ feature }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    <div class="cta">
+        <a href="{{ url_for('home') }}" class="btn btn-secondary">返回首頁</a>
+    </div>
+</div>
+{% endblock %}
