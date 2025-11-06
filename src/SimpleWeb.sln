@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleWeb.UITest", "SimpleW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleWebRazor", "SimpleWebRazor\SimpleWebRazor.csproj", "{FFF6E814-4D2F-4C07-94BC-85930CDD8F66}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleWebRazor.UnitTest", "SimpleWebRazor.UnitTest\SimpleWebRazor.UnitTest.csproj", "{F88EC77F-4C79-476B-B34D-5D0E7C9FD4D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,18 @@ Global
 		{FFF6E814-4D2F-4C07-94BC-85930CDD8F66}.Release|x64.Build.0 = Release|Any CPU
 		{FFF6E814-4D2F-4C07-94BC-85930CDD8F66}.Release|x86.ActiveCfg = Release|Any CPU
 		{FFF6E814-4D2F-4C07-94BC-85930CDD8F66}.Release|x86.Build.0 = Release|Any CPU
+		{F88EC77F-4C79-476B-B34D-5D0E7C9FD4D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F88EC77F-4C79-476B-B34D-5D0E7C9FD4D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F88EC77F-4C79-476B-B34D-5D0E7C9FD4D5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F88EC77F-4C79-476B-B34D-5D0E7C9FD4D5}.Debug|x64.Build.0 = Debug|Any CPU
+		{F88EC77F-4C79-476B-B34D-5D0E7C9FD4D5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F88EC77F-4C79-476B-B34D-5D0E7C9FD4D5}.Debug|x86.Build.0 = Debug|Any CPU
+		{F88EC77F-4C79-476B-B34D-5D0E7C9FD4D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F88EC77F-4C79-476B-B34D-5D0E7C9FD4D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F88EC77F-4C79-476B-B34D-5D0E7C9FD4D5}.Release|x64.ActiveCfg = Release|Any CPU
+		{F88EC77F-4C79-476B-B34D-5D0E7C9FD4D5}.Release|x64.Build.0 = Release|Any CPU
+		{F88EC77F-4C79-476B-B34D-5D0E7C9FD4D5}.Release|x86.ActiveCfg = Release|Any CPU
+		{F88EC77F-4C79-476B-B34D-5D0E7C9FD4D5}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
