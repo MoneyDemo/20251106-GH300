@@ -20,7 +20,7 @@ def info():
         'name': '20251106-GH300',
         'description': '這是一個示範專案，展示如何使用 Python Flask 建立簡單的網站。',
         'framework': 'Flask',
-        'language': 'Python 3.12+',
+        'language': 'Python 3.8+',
         'features': [
             '簡潔的專案結構',
             '易於擴展與維護',
