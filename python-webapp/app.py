@@ -34,4 +34,6 @@ def info():
 if __name__ == '__main__':
     # 開發模式運行，啟用除錯功能
     # Run in development mode with debug enabled
+    # WARNING: debug=True and host='0.0.0.0' should ONLY be used for development
+    # For production, use a proper WSGI server (e.g., Gunicorn, uWSGI)
     app.run(debug=True, host='0.0.0.0', port=5000)
