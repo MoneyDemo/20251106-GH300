@@ -1,64 +1,64 @@
 # SimpleWeb
 
-A comprehensive demo ASP.NET Core web application showcasing modern cloud-native development practices, infrastructure as code, and CI/CD pipelines.
+一個全面展示現代雲原生開發實踐、基礎設施即程式碼（IaC）和 CI/CD 流程的 ASP.NET Core 示範應用程式。
 
-## 📋 Table of Contents
+## 📋 目錄
 
-- [Overview](#overview)
-- [Features](#features)
-- [Technology Stack](#technology-stack)
-- [Prerequisites](#prerequisites)
-- [Getting Started](#getting-started)
-- [Configuration](#configuration)
-- [Building and Running](#building-and-running)
-- [Docker Support](#docker-support)
-- [Infrastructure as Code](#infrastructure-as-code)
-- [Kubernetes Deployment](#kubernetes-deployment)
-- [CI/CD Pipelines](#cicd-pipelines)
-- [Project Structure](#project-structure)
-- [Testing](#testing)
-- [Contributing](#contributing)
+- [概述](#概述)
+- [功能特色](#功能特色)
+- [技術堆疊](#技術堆疊)
+- [先決條件](#先決條件)
+- [快速開始](#快速開始)
+- [設定說明](#設定說明)
+- [建置與執行](#建置與執行)
+- [Docker 支援](#docker-支援)
+- [基礎設施即程式碼](#基礎設施即程式碼)
+- [Kubernetes 部署](#kubernetes-部署)
+- [CI/CD 流程](#cicd-流程)
+- [專案結構](#專案結構)
+- [測試](#測試)
+- [貢獻指南](#貢獻指南)
 
-## 🎯 Overview
+## 🎯 概述
 
-SimpleWeb is a demo ASP.NET Core 6.0 MVC application designed to demonstrate best practices in modern web application development, cloud deployment, and DevOps automation. The project includes examples of:
+SimpleWeb 是一個 ASP.NET Core 6.0 MVC 示範應用程式，旨在展示現代 Web 應用程式開發、雲端部署和 DevOps 自動化的最佳實踐。本專案包含以下範例：
 
-- Cloud-native application architecture
-- Multiple storage provider implementations (Azure Blob Storage and Local)
-- Infrastructure provisioning using both Bicep and Terraform
-- Container orchestration with Kubernetes
-- Comprehensive CI/CD pipelines for Azure DevOps and GitHub Actions
-- Application monitoring with Azure Application Insights
-- Health checks and diagnostics
+- 雲原生應用程式架構
+- 多種儲存提供者實作（Azure Blob Storage 和本地端）
+- 使用 Bicep 和 Terraform 進行基礎設施佈建
+- 使用 Kubernetes 進行容器編排
+- Azure DevOps 和 GitHub Actions 的完整 CI/CD 流程
+- Azure Application Insights 應用程式監控
+- 健康檢查和診斷功能
 
-## ✨ Features
+## ✨ 功能特色
 
-- **File Upload System**: Upload and manage files with support for multiple storage backends
-- **Multi-Storage Support**: 
-  - Azure Blob Storage integration
-  - Local file system storage
-  - Configurable storage provider selection
-- **Authentication**: Azure App Service authentication integration
-- **Monitoring**: Application Insights telemetry and diagnostics
-- **Health Checks**: Built-in health check endpoints
-- **Responsive UI**: Modern MVC-based user interface
-- **Docker Ready**: Containerized application with multi-stage Dockerfile
-- **Cloud Deployable**: Ready for deployment to Azure App Service and Azure Kubernetes Service
+- **檔案上傳系統**：支援多種儲存後端的檔案上傳和管理功能
+- **多儲存支援**： 
+  - Azure Blob Storage 整合
+  - 本地檔案系統儲存
+  - 可配置的儲存提供者選擇
+- **身份驗證**：Azure App Service 身份驗證整合
+- **監控**：Application Insights 遙測和診斷
+- **健康檢查**：內建健康檢查端點
+- **響應式 UI**：現代化的 MVC 使用者介面
+- **Docker 就緒**：具有多階段建置的容器化應用程式
+- **雲端部署**：可部署至 Azure App Service 和 Azure Kubernetes Service
 
-## 🛠 Technology Stack
+## 🛠 技術堆疊
 
-- **Framework**: .NET 6.0
-- **Web Framework**: ASP.NET Core MVC
-- **Storage**: TwentyTwenty.Storage (Azure & Local providers)
-- **Monitoring**: Azure Application Insights
-- **Configuration**: ASP.NET Core Configuration with User Secrets
-- **Containerization**: Docker
-- **Orchestration**: Kubernetes
-- **Infrastructure**: Azure Bicep, Terraform
-- **CI/CD**: Azure DevOps Pipelines, GitHub Actions
-- **Testing**: xUnit, Selenium (UI Tests)
+- **框架**：.NET 6.0
+- **Web 框架**：ASP.NET Core MVC
+- **儲存**：TwentyTwenty.Storage（Azure 和本地提供者）
+- **監控**：Azure Application Insights
+- **設定**：ASP.NET Core Configuration with User Secrets
+- **容器化**：Docker
+- **編排**：Kubernetes
+- **基礎設施**：Azure Bicep、Terraform
+- **CI/CD**：Azure DevOps Pipelines、GitHub Actions
+- **測試**：xUnit、Selenium（UI 測試）
 
-### Key NuGet Packages
+### 主要 NuGet 套件
 
 - `Ci.Extensions` (6.0.3)
 - `Microsoft.ApplicationInsights.AspNetCore` (2.21.0)
@@ -68,34 +68,34 @@ SimpleWeb is a demo ASP.NET Core 6.0 MVC application designed to demonstrate bes
 - `TwentyTwenty.Storage.Azure` (2.20.0)
 - `TwentyTwenty.Storage.Local` (2.20.0)
 
-## 📦 Prerequisites
+## 📦 先決條件
 
-- [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0) or later
-- [Docker Desktop](https://www.docker.com/products/docker-desktop) (for containerization)
-- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) (for Azure deployments)
-- [Terraform](https://www.terraform.io/downloads) (for infrastructure provisioning)
-- [kubectl](https://kubernetes.io/docs/tasks/tools/) (for Kubernetes deployments)
-- An Azure subscription (for cloud deployments)
+- [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0) 或更新版本
+- [Docker Desktop](https://www.docker.com/products/docker-desktop)（用於容器化）
+- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)（用於 Azure 部署）
+- [Terraform](https://www.terraform.io/downloads)（用於基礎設施佈建）
+- [kubectl](https://kubernetes.io/docs/tasks/tools/)（用於 Kubernetes 部署）
+- Azure 訂閱（用於雲端部署）
 
-## 🚀 Getting Started
+## 🚀 快速開始
 
-### 1. Clone the Repository
+### 1. 複製儲存庫
 
 ```bash
 git clone https://github.com/lettucebo/20251106-GH300.git
 cd 20251106-GH300
 ```
 
-### 2. Restore Dependencies
+### 2. 還原相依套件
 
 ```bash
 cd src
 dotnet restore SimpleWeb.sln
 ```
 
-### 3. Configure User Secrets
+### 3. 設定使用者密碼
 
-For local development with Azure Storage, configure user secrets:
+若要在本地開發環境使用 Azure Storage，請設定使用者密碼：
 
 ```bash
 cd SimpleWeb
@@ -103,28 +103,28 @@ dotnet user-secrets init
 dotnet user-secrets set "Storage:Azure:ConnectionString" "YOUR_AZURE_STORAGE_CONNECTION_STRING"
 ```
 
-See [Safe storage of app secrets in development in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets) for more information.
+詳細資訊請參閱 [ASP.NET Core 開發中安全儲存應用程式密碼](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets)。
 
-### 4. Run the Application
+### 4. 執行應用程式
 
 ```bash
 dotnet run --project src/SimpleWeb/SimpleWeb.csproj
 ```
 
-The application will be available at `http://localhost:80`.
+應用程式將在 `http://localhost:80` 提供服務。
 
-## ⚙️ Configuration
+## ⚙️ 設定說明
 
-### Storage Configuration
+### 儲存設定
 
-The application supports two storage types configured in `appsettings.json`:
+應用程式支援兩種在 `appsettings.json` 中設定的儲存類型：
 
-#### Local Storage (Default for Development)
+#### 本地儲存（開發環境預設）
 
 ```json
 {
   "Storage": {
-    "Type": 0,  // 0 = Local, 1 = Azure
+    "Type": 0,  // 0 = 本地, 1 = Azure
     "FileName": "default.jpg"
   }
 }
@@ -137,7 +137,7 @@ The application supports two storage types configured in `appsettings.json`:
   "Storage": {
     "Type": 1,  // 1 = Azure Blob Storage
     "Azure": {
-      "ConnectionString": "user-secrets"  // Loaded from user secrets
+      "ConnectionString": "user-secrets"  // 從使用者密碼載入
     },
     "FileName": "default.jpg"
   }
@@ -146,7 +146,7 @@ The application supports two storage types configured in `appsettings.json`:
 
 ### Application Insights
 
-Configure Application Insights connection string in `appsettings.json`:
+在 `appsettings.json` 中設定 Application Insights 連接字串：
 
 ```json
 {
@@ -156,71 +156,71 @@ Configure Application Insights connection string in `appsettings.json`:
 }
 ```
 
-Or set via environment variable:
+或透過環境變數設定：
 
 ```bash
 APPINSIGHTS_CONNECTIONSTRING="InstrumentationKey=YOUR_KEY"
 ```
 
-## 🏗 Building and Running
+## 🏗 建置與執行
 
-### Build the Solution
+### 建置方案
 
 ```bash
 dotnet build src/SimpleWeb.sln --configuration Release
 ```
 
-### Run Tests
+### 執行測試
 
 ```bash
 dotnet test src/SimpleWeb.sln --no-restore --verbosity normal
 ```
 
-### Build with GitHub Actions
+### 使用 GitHub Actions 建置
 
-The project includes a GitHub Actions workflow (`.github/workflows/dotnet.yml`) that automatically:
-- Restores dependencies
-- Builds the solution
-- Runs all tests
+專案包含 GitHub Actions 工作流程（`.github/workflows/dotnet.yml`），會自動執行：
+- 還原相依套件
+- 建置方案
+- 執行所有測試
 
-## 🐳 Docker Support
+## 🐳 Docker 支援
 
-### Build Docker Image
+### 建置 Docker 映像
 
 ```bash
 cd src/SimpleWeb
 docker build -t simpleweb:latest .
 ```
 
-### Run Container
+### 執行容器
 
 ```bash
 docker run -p 8080:80 simpleweb:latest
 ```
 
-Access the application at `http://localhost:8080`.
+在 `http://localhost:8080` 存取應用程式。
 
-### Multi-Stage Dockerfile
+### 多階段 Dockerfile
 
-The project uses a multi-stage Dockerfile for optimized image size:
-- **Base**: .NET 6.0 runtime
-- **Build**: .NET 6.0 SDK for building
-- **Publish**: Published artifacts
-- **Final**: Minimal runtime image with application
+專案使用多階段 Dockerfile 以優化映像大小：
+- **Base**：.NET 6.0 執行環境
+- **Build**：.NET 6.0 SDK 用於建置
+- **Publish**：發布的成品
+- **Final**：包含應用程式的最小執行環境映像
 
-## 🏗️ Infrastructure as Code
+## 🏗️ 基礎設施即程式碼
 
 ### Azure Bicep
 
-Deploy infrastructure using Azure Bicep:
+使用 Azure Bicep 部署基礎設施：
 
 ```bash
 cd bicep
 
-# Create resource group
+# 建立資源群組
 az group create --name Demo0217 --location eastasia
 
-# Deploy infrastructure
+# 部署基礎設施
 az deployment group create \
   --resource-group Demo0217 \
   --template-file main.bicep \
@@ -228,192 +228,192 @@ az deployment group create \
   --parameters password='YourSecurePassword123!'
 ```
 
-**Resources Created:**
-- Virtual Network and Subnet
-- Storage Account
-- Public IP Address
-- Network Interface
-- Windows Virtual Machine (2019 Datacenter)
+**建立的資源：**
+- 虛擬網路和子網路
+- 儲存體帳戶
+- 公用 IP 位址
+- 網路介面
+- Windows 虛擬機器（2019 Datacenter）
 
 ### Terraform
 
-Deploy infrastructure using Terraform:
+使用 Terraform 部署基礎設施：
 
 ```bash
 cd tf
 
-# Initialize Terraform
+# 初始化 Terraform
 terraform init
 
-# Plan deployment
+# 規劃部署
 terraform plan
 
-# Apply configuration
+# 套用設定
 terraform apply
 ```
 
-**Resources Created:**
-- Resource Group (with timestamp-based naming)
-- App Service Plan (Linux, Standard S1)
-- App Service (.NET Core 6.0)
+**建立的資源：**
+- 資源群組（使用時間戳記命名）
+- App Service 方案（Linux、Standard S1）
+- App Service（.NET Core 6.0）
 
-## ☸️ Kubernetes Deployment
+## ☸️ Kubernetes 部署
 
-### Deploy to AKS
+### 部署至 AKS
 
 ```bash
-# Apply Kubernetes manifests
+# 套用 Kubernetes 資訊清單
 kubectl apply -f manifests/deployment.yml
 kubectl apply -f manifests/service.yml
 
-# Verify deployment
+# 驗證部署
 kubectl get deployments
 kubectl get services
 kubectl get pods
 ```
 
-### Kubernetes Resources
+### Kubernetes 資源
 
-- **Deployment**: `simpleweb` with 1 replica
-- **Service**: LoadBalancer exposing port 80
-- **Container Image**: Pulled from Azure Container Registry
+- **Deployment**：`simpleweb`，1 個複本
+- **Service**：LoadBalancer，公開連接埠 80
+- **Container Image**：從 Azure Container Registry 提取
 
-### Update Container Image
+### 更新容器映像
 
 ```bash
 kubectl set image deployment/simpleweb simpleweb=demo0903.azurecr.io/simpleweb:v2
 ```
 
-## 🔄 CI/CD Pipelines
+## 🔄 CI/CD 流程
 
 ### Azure DevOps Pipelines
 
-The `ci/` directory contains various Azure DevOps pipeline configurations:
+`ci/` 目錄包含各種 Azure DevOps 流程設定：
 
-1. **01.build.yml**: Basic build and test pipeline
-2. **02.packagescan.yml**: Package vulnerability scanning
-3. **03.sonarcloud.yml**: Code quality analysis with SonarCloud
-4. **04.publish.artifacts.yml**: Build and publish artifacts
-5. **05.multistagerelease.yml**: Multi-stage deployment pipeline
-6. **06.dockerseperate.yml**: Docker build in separate stages
-7. **07.dockerbuildandpush.yml**: Build and push Docker images
-8. **08.aks.yml**: Deploy to Azure Kubernetes Service
-9. **09.terraform.release.yml**: Terraform infrastructure deployment
-10. **10.bicep.yml**: Bicep infrastructure deployment
+1. **01.build.yml**：基本建置和測試流程
+2. **02.packagescan.yml**：套件漏洞掃描
+3. **03.sonarcloud.yml**：使用 SonarCloud 進行程式碼品質分析
+4. **04.publish.artifacts.yml**：建置和發布成品
+5. **05.multistagerelease.yml**：多階段部署流程
+6. **06.dockerseperate.yml**：分階段的 Docker 建置
+7. **07.dockerbuildandpush.yml**：建置和推送 Docker 映像
+8. **08.aks.yml**：部署至 Azure Kubernetes Service
+9. **09.terraform.release.yml**：Terraform 基礎設施部署
+10. **10.bicep.yml**：Bicep 基礎設施部署
 
 ### GitHub Actions
 
-**Workflow**: `.github/workflows/dotnet.yml`
+**工作流程**：`.github/workflows/dotnet.yml`
 
-Triggers on every push and performs:
-- Checkout code
-- Setup .NET 6.0 SDK
-- Restore NuGet packages
-- Build solution in Release configuration
-- Run all unit and integration tests
+在每次推送時觸發並執行：
+- 檢出程式碼
+- 設定 .NET 6.0 SDK
+- 還原 NuGet 套件
+- 以 Release 組態建置方案
+- 執行所有單元和整合測試
 
-## 📁 Project Structure
+## 📁 專案結構
 
 ```
 20251106-GH300/
 ├── .github/
 │   └── workflows/
-│       └── dotnet.yml              # GitHub Actions workflow
+│       └── dotnet.yml              # GitHub Actions 工作流程
 ├── bicep/
-│   ├── main.bicep                  # Bicep infrastructure template
-│   └── parameters.json             # Bicep parameters
+│   ├── main.bicep                  # Bicep 基礎設施範本
+│   └── parameters.json             # Bicep 參數
 ├── ci/
-│   ├── 01.build.yml                # Azure DevOps build pipeline
-│   ├── 02.packagescan.yml          # Package scanning
-│   ├── 03.sonarcloud.yml           # Code quality pipeline
-│   ├── 04.publish.artifacts.yml    # Artifact publishing
-│   ├── 05.multistagerelease.yml    # Multi-stage release
-│   ├── 06.dockerseperate.yml       # Docker build pipeline
-│   ├── 07.dockerbuildandpush.yml   # Docker push pipeline
-│   ├── 08.aks.yml                  # AKS deployment
-│   ├── 09.terraform.release.yml    # Terraform deployment
-│   └── 10.bicep.yml                # Bicep deployment
+│   ├── 01.build.yml                # Azure DevOps 建置流程
+│   ├── 02.packagescan.yml          # 套件掃描
+│   ├── 03.sonarcloud.yml           # 程式碼品質流程
+│   ├── 04.publish.artifacts.yml    # 成品發布
+│   ├── 05.multistagerelease.yml    # 多階段發布
+│   ├── 06.dockerseperate.yml       # Docker 建置流程
+│   ├── 07.dockerbuildandpush.yml   # Docker 推送流程
+│   ├── 08.aks.yml                  # AKS 部署
+│   ├── 09.terraform.release.yml    # Terraform 部署
+│   └── 10.bicep.yml                # Bicep 部署
 ├── manifests/
 │   ├── deployment.yml              # Kubernetes Deployment
 │   └── service.yml                 # Kubernetes Service
 ├── scripts/
-│   └── TestifyZeroDowntime.ps1     # Zero downtime testing script
+│   └── TestifyZeroDowntime.ps1     # 零停機測試腳本
 ├── src/
-│   ├── SimpleWeb/                  # Main web application
-│   │   ├── Controllers/            # MVC Controllers
-│   │   ├── Models/                 # Data models
-│   │   ├── Views/                  # Razor views
-│   │   ├── wwwroot/                # Static files
-│   │   ├── Dockerfile              # Container definition
-│   │   ├── Program.cs              # Application entry point
-│   │   ├── Startup.cs              # Configuration and services
-│   │   └── appsettings.json        # Application configuration
-│   ├── SimpleWeb.UnitTest/         # Unit tests
-│   ├── SimpleWeb.UITest/           # UI/Integration tests
-│   └── SimpleWeb.sln               # Solution file
+│   ├── SimpleWeb/                  # 主要 Web 應用程式
+│   │   ├── Controllers/            # MVC 控制器
+│   │   ├── Models/                 # 資料模型
+│   │   ├── Views/                  # Razor 視圖
+│   │   ├── wwwroot/                # 靜態檔案
+│   │   ├── Dockerfile              # 容器定義
+│   │   ├── Program.cs              # 應用程式進入點
+│   │   ├── Startup.cs              # 設定和服務
+│   │   └── appsettings.json        # 應用程式設定
+│   ├── SimpleWeb.UnitTest/         # 單元測試
+│   ├── SimpleWeb.UITest/           # UI/整合測試
+│   └── SimpleWeb.sln               # 方案檔
 ├── tf/
-│   └── infra.tf                    # Terraform infrastructure
-└── README.md                       # This file
+│   └── infra.tf                    # Terraform 基礎設施
+└── README.md                       # 本檔案
 ```
 
-## 🧪 Testing
+## 🧪 測試
 
-### Unit Tests
+### 單元測試
 
-Located in `src/SimpleWeb.UnitTest/`:
+位於 `src/SimpleWeb.UnitTest/`：
 
 ```bash
 dotnet test src/SimpleWeb.UnitTest/SimpleWeb.UnitTest.csproj
 ```
 
-### UI Tests
+### UI 測試
 
-Selenium-based UI tests in `src/SimpleWeb.UITest/`:
+位於 `src/SimpleWeb.UITest/` 的 Selenium 基礎 UI 測試：
 
 ```bash
 dotnet test src/SimpleWeb.UITest/SimpleWeb.UITest.csproj
 ```
 
-### Zero Downtime Testing
+### 零停機測試
 
-PowerShell script to verify zero-downtime deployments:
+用於驗證零停機部署的 PowerShell 腳本：
 
 ```powershell
 .\scripts\TestifyZeroDowntime.ps1
 ```
 
-## 🤝 Contributing
+## 🤝 貢獻指南
 
-Contributions are welcome! Please follow these guidelines:
+歡迎貢獻！請遵循以下準則：
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. Fork 此儲存庫
+2. 建立功能分支（`git checkout -b feature/amazing-feature`）
+3. 提交您的變更（`git commit -m 'Add some amazing feature'`）
+4. 推送至分支（`git push origin feature/amazing-feature`）
+5. 開啟 Pull Request
 
-### Development Guidelines
+### 開發準則
 
-- Follow existing code style and conventions
-- Write unit tests for new features
-- Update documentation as needed
-- Ensure all tests pass before submitting PR
-- Keep commits atomic and well-described
+- 遵循現有的程式碼風格和慣例
+- 為新功能撰寫單元測試
+- 視需要更新文件
+- 在提交 PR 前確保所有測試通過
+- 保持提交的原子性和良好描述
 
-## 📄 License
+## 📄 授權
 
-This is a demo project for educational and demonstration purposes.
+這是一個用於教育和示範目的的示範專案。
 
-## 🔗 Resources
+## 🔗 資源
 
-- [ASP.NET Core Documentation](https://docs.microsoft.com/en-us/aspnet/core/)
-- [Azure Bicep Documentation](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/)
+- [ASP.NET Core 文件](https://docs.microsoft.com/en-us/aspnet/core/)
+- [Azure Bicep 文件](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/)
 - [Terraform Azure Provider](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
-- [Kubernetes Documentation](https://kubernetes.io/docs/)
+- [Kubernetes 文件](https://kubernetes.io/docs/)
 - [Azure DevOps Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/)
-- [GitHub Actions Documentation](https://docs.github.com/en/actions)
-- [Safe storage of app secrets in development](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets)
+- [GitHub Actions 文件](https://docs.github.com/en/actions)
+- [ASP.NET Core 開發中安全儲存應用程式密碼](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets)
 
-## 📧 Support
+## 📧 支援
 
-For questions or issues, please open an issue in the GitHub repository.
+若有問題或意見，請在 GitHub 儲存庫中開啟 issue。
