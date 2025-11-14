@@ -7,6 +7,7 @@
 - [概述](#概述)
 - [功能特色](#功能特色)
 - [技術堆疊](#技術堆疊)
+- [Python 網站框架比較](#python-網站框架比較)
 - [先決條件](#先決條件)
 - [快速開始](#快速開始)
 - [設定說明](#設定說明)
@@ -67,6 +68,34 @@ SimpleWeb 是一個 ASP.NET Core 6.0 MVC 示範應用程式，旨在展示現代
 - `TwentyTwenty.Storage` (2.20.0)
 - `TwentyTwenty.Storage.Azure` (2.20.0)
 - `TwentyTwenty.Storage.Local` (2.20.0)
+
+## 🐍 Python 網站框架比較
+
+本專案包含 Python Flask 範例應用程式（位於 `python-webapp/` 目錄）。如果您想了解不同 Python Web 框架的特點和選擇建議，請參閱：
+
+📘 **[Python 網站框架比較分析文檔](PYTHON_FRAMEWORK_COMPARISON.md)**
+
+該文檔詳細比較了三大主流 Python Web 框架：
+- **Flask**：輕量級微框架，靈活且易於學習
+- **Django**：全功能框架，適合大型專案
+- **FastAPI**：現代高性能 API 框架，支援異步
+
+文檔內容包括：
+- 各框架的特色、優缺點與適用情境
+- 安裝難易度與學習曲線分析
+- 功能擴展性與性能比較
+- 社群支援與文件完整度
+- 針對不同專案需求的框架選擇建議
+
+### Python Flask 範例快速開始
+
+```bash
+cd python-webapp
+pip install -r requirements.txt
+python3 app.py
+```
+
+瀏覽器開啟 `http://localhost:5000` 查看範例網站。詳細說明請參閱 [python-webapp/README.md](python-webapp/README.md)。
 
 ## 📦 先決條件
 
