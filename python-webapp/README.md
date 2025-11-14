@@ -7,6 +7,7 @@
 ```
 python-webapp/
 ├── app.py                 # Flask 應用程式主檔案
+├── test_app.py            # 測試檔案
 ├── requirements.txt       # Python 套件依賴清單
 ├── templates/            # HTML 模板目錄
 │   ├── base.html         # 基礎模板（包含導航列和頁尾）
@@ -25,6 +26,7 @@ python-webapp/
 - ✅ 清晰的專案結構
 - ✅ 中文介面
 - ✅ 簡潔美觀的 UI 設計
+- ✅ 完整的測試套件 (21 個測試，77% 程式碼覆蓋率)
 
 ## 環境需求
 
@@ -104,6 +106,36 @@ flask run
 - 包含技術架構說明
 - 列出專案特色功能
 
+## 測試
+
+### 執行測試
+
+在 `python-webapp` 目錄下執行：
+
+```bash
+# 執行所有測試
+python3 -m pytest test_app.py -v
+
+# 執行測試並顯示程式碼覆蓋率
+python3 -m pytest test_app.py --cov=app --cov-report=term-missing
+
+# 執行測試並產生 HTML 覆蓋率報告
+python3 -m pytest test_app.py --cov=app --cov-report=html
+```
+
+### 測試內容
+
+測試套件包含 21 個測試，涵蓋以下方面：
+
+- **首頁路由測試**：測試首頁的狀態碼、內容類型、標題和導航
+- **資訊頁路由測試**：測試資訊頁的內容和顯示
+- **靜態檔案測試**：測試 CSS 檔案的存取
+- **錯誤處理測試**：測試 404 錯誤和不允許的方法
+- **安全性測試**：測試除錯模式設定和回應標頭
+- **回應資料測試**：測試 HTML 回應的有效性
+
+測試覆蓋率達到 **77%**，主要未涵蓋的是應用程式啟動程式碼。
+
 ## 擴展建議
 
 此範例網站架構清晰，方便後續擴展，可以考慮：
@@ -126,6 +158,7 @@ flask run
 - **後端框架**：Flask 3.0.0
 - **前端技術**：HTML5, CSS3
 - **Python 版本**：3.8+
+- **測試框架**：pytest 8.3.3, pytest-cov 5.0.0
 
 ## 授權
 
